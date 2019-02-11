@@ -1,0 +1,19 @@
+0x80	- CallingPartyNumber
+0xXX	- length of ParticipantID (Call -ing -ed PartyNumber)  = N
+XXXXXXXX	- 1st byte of length
+||     |
+||_____|
+|   |
+|   |________ Nature Of Address Indicator (1-Spare,2-Subscriber,3-Unknown,4-National,5-International)
+|
+|___=1 Odd / =0 Even Indicator
+
+XXXXXXXX	- 2nd byte
+ |_|
+  |
+  |
+  |_____ Numberin plan indicator (1-E164, 3-X121, 4-F69, 5-resrv, 6-resrv)
+
+0xXX
+...	X - digits 0x0, 0x1, 0x2, ... 0x9, 0xA, 0xB
+0xXX  		- Nth byte of length
